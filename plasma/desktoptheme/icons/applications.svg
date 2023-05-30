@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="54"
+   height="32"
+   version="1.1"
+   id="svg80"
+   sodipodi:docname="applications.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview82"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="true"
+     inkscape:zoom="14.75"
+     inkscape:cx="47.186441"
+     inkscape:cy="3.6271186"
+     inkscape:window-width="3840"
+     inkscape:window-height="2028"
+     inkscape:window-x="0"
+     inkscape:window-y="64"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg80">
+    <inkscape:grid
+       type="xygrid"
+       id="grid190"
+       spacingx="0.5"
+       spacingy="0.5"
+       empspacing="2"
+       color="#e500c2"
+       opacity="0.14901961" />
+  </sodipodi:namedview>
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">.ColorScheme-Text { color:#363636; }</style>
+  </defs>
+  <g
+     id="22-22-applications-other">
+    <path
+       d="M 0,10 V 32 H 22 V 10 Z"
+       fill="none"
+       id="path70" />
+    <path
+       id="rect244"
+       d="M 4.5,13 C 3.6690017,13 3,13.669002 3,14.5 v 4 C 3,19.330998 3.6690017,20 4.5,20 h 4 C 9.330998,20 10,19.330998 10,18.5 v -4 C 10,13.669002 9.330998,13 8.5,13 Z m 9,0 C 12.669002,13 12,13.669002 12,14.5 v 4 c 0,0.830998 0.669002,1.5 1.5,1.5 h 4 c 0.830998,0 1.5,-0.669002 1.5,-1.5 v -4 C 19,13.669002 18.330998,13 17.5,13 Z m -9,1.5 h 4 v 4 h -4 z m 9,0 h 4 v 4 h -4 z M 4.5,22 C 3.6690017,22 3,22.669002 3,23.5 v 4 C 3,28.330998 3.6690017,29 4.5,29 h 4 C 9.330998,29 10,28.330998 10,27.5 v -4 C 10,22.669002 9.330998,22 8.5,22 Z m 9,0 C 12.669002,22 12,22.669002 12,23.5 v 4 c 0,0.830998 0.669002,1.5 1.5,1.5 h 4 c 0.830998,0 1.5,-0.669002 1.5,-1.5 v -4 C 19,22.669002 18.330998,22 17.5,22 Z m -9,1.5 h 4 v 4 h -4 z m 9,0 h 4 v 4 h -4 z"
+       class="ColorScheme-Text"
+       fill="currentColor" />
+  </g>
+  <g
+     id="applications-other">
+    <rect
+       x="22"
+       width="32"
+       height="32"
+       opacity="0"
+       id="rect5"
+       y="0" />
+    <path
+       id="rect329"
+       d="M 30.5,6 C 29.115002,6 28,7.115002 28,8.5 v 4 c 0,1.384998 1.115002,2.5 2.5,2.5 h 4 c 1.384998,0 2.5,-1.115002 2.5,-2.5 v -4 C 37,7.115002 35.884998,6 34.5,6 Z m 11,0 C 40.115002,6 39,7.115002 39,8.5 v 4 c 0,1.384998 1.115002,2.5 2.5,2.5 h 4 c 1.384998,0 2.5,-1.115002 2.5,-2.5 v -4 C 48,7.115002 46.884998,6 45.5,6 Z m -11,1.5 h 4 c 0.553998,0 1,0.446002 1,1 v 4 c 0,0.553998 -0.446002,1 -1,1 h -4 c -0.553998,0 -1,-0.446002 -1,-1 v -4 c 0,-0.553998 0.446002,-1 1,-1 z m 11,0 h 4 c 0.553998,0 1,0.446002 1,1 v 4 c 0,0.553998 -0.446002,1 -1,1 h -4 c -0.553998,0 -1,-0.446002 -1,-1 v -4 c 0,-0.553998 0.446002,-1 1,-1 z M 30.5,17 C 29.115002,17 28,18.115002 28,19.5 v 4 c 0,1.384998 1.115002,2.5 2.5,2.5 h 4 c 1.384998,0 2.5,-1.115002 2.5,-2.5 v -4 C 37,18.115002 35.884998,17 34.5,17 Z m 11,0 C 40.115002,17 39,18.115002 39,19.5 v 4 c 0,1.384998 1.115002,2.5 2.5,2.5 h 4 c 1.384998,0 2.5,-1.115002 2.5,-2.5 v -4 C 48,18.115002 46.884998,17 45.5,17 Z m -11,1.5 h 4 c 0.553998,0 1,0.446002 1,1 v 4 c 0,0.553998 -0.446002,1 -1,1 h -4 c -0.553998,0 -1,-0.446002 -1,-1 v -4 c 0,-0.553998 0.446002,-1 1,-1 z m 11,0 h 4 c 0.553998,0 1,0.446002 1,1 v 4 c 0,0.553998 -0.446002,1 -1,1 h -4 c -0.553998,0 -1,-0.446002 -1,-1 v -4 c 0,-0.553998 0.446002,-1 1,-1 z"
+       class="ColorScheme-Text"
+       fill="currentColor"
+       sodipodi:nodetypes="ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss" />
+  </g>
+</svg>
