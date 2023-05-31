@@ -1,23 +1,13 @@
 #! /usr/bin/env bash
 
-ROOT_UID=0
-
 # Destination directory
-if [ "$UID" -eq "$ROOT_UID" ]; then
-  AURORAE_DIR="/usr/share/aurorae/themes"
-  SCHEMES_DIR="/usr/share/color-schemes"
-  PLASMA_DIR="/usr/share/plasma/desktoptheme"
-  LOOKFEEL_DIR="/usr/share/plasma/look-and-feel"
-  KVANTUM_DIR="/usr/share/Kvantum"
-  WALLPAPER_DIR="/usr/share/wallpapers"
-else
-  AURORAE_DIR="$HOME/.local/share/aurorae/themes"
-  SCHEMES_DIR="$HOME/.local/share/color-schemes"
-  PLASMA_DIR="$HOME/.local/share/plasma/desktoptheme"
-  LOOKFEEL_DIR="$HOME/.local/share/plasma/look-and-feel"
-  KVANTUM_DIR="$HOME/.config/Kvantum"
-  WALLPAPER_DIR="$HOME/.local/share/wallpapers"
-fi
+AURORAE_DIR="$HOME/.local/share/aurorae/themes"
+SCHEMES_DIR="$HOME/.local/share/color-schemes"
+PLASMA_DIR="$HOME/.local/share/plasma/desktoptheme"
+PLASMOIDS_DIR="$HOME/.local/share/plasma/plasmoids"
+LOOKFEEL_DIR="$HOME/.local/share/plasma/look-and-feel"
+KVANTUM_DIR="$HOME/.config/Kvantum"
+WALLPAPER_DIR="$HOME/.local/share/wallpapers"
 
 SRC_DIR=$(cd $(dirname $0) && pwd)
 
@@ -41,6 +31,7 @@ EOF
 [[ ! -d ${AURORAE_DIR} ]] && mkdir -p ${AURORAE_DIR}
 [[ ! -d ${SCHEMES_DIR} ]] && mkdir -p ${SCHEMES_DIR}
 [[ ! -d ${PLASMA_DIR} ]] && mkdir -p ${PLASMA_DIR}
+[[ ! -d ${PLASMOIDS_DIR} ]] && mkdir -p ${PLASMOIDS_DIR}
 [[ ! -d ${LOOKFEEL_DIR} ]] && mkdir -p ${LOOKFEEL_DIR}
 [[ ! -d ${KVANTUM_DIR} ]] && mkdir -p ${KVANTUM_DIR}
 [[ ! -d ${WALLPAPER_DIR} ]] && mkdir -p ${WALLPAPER_DIR}
@@ -74,6 +65,7 @@ install() {
   cp -r ${SRC_DIR}/plasma/desktoptheme/${name}${color}                               ${PLASMA_DIR}
   cp -r ${SRC_DIR}/plasma/desktoptheme/icons                                         ${PLASMA_DIR}/${name}${color}
   cp -r ${SRC_DIR}/color-schemes/${name}${ELSE_COLOR}.colors                         ${PLASMA_DIR}/${name}${color}/colors
+  cp -r ${SRC_DIR}/plasma/plasmoids/*                                                ${PLASMOIDS_DIR}
   cp -r ${SRC_DIR}/plasma/look-and-feel/com.github.vinceliuice.${name}${color}       ${LOOKFEEL_DIR}
   cp -r ${SRC_DIR}/wallpapers/${name}*                                               ${WALLPAPER_DIR}
   mkdir -p                                                                           ${PLASMA_DIR}/${name}${color}/wallpapers
