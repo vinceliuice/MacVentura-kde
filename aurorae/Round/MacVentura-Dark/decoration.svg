@@ -4,7 +4,7 @@
    height="310"
    id="svg3642"
    sodipodi:version="0.32"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="decoration.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
@@ -24,16 +24,16 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="261.27595"
-     inkscape:cy="98.994947"
+     inkscape:cx="346.48231"
+     inkscape:cy="222.73863"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:window-width="1920"
-     inkscape:window-height="999"
+     inkscape:window-height="1000"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="44"
      width="48px"
      height="48px"
      showguides="true"
@@ -52,7 +52,9 @@
      inkscape:object-paths="true"
      inkscape:snap-nodes="true"
      inkscape:document-rotation="0"
-     inkscape:pagecheckerboard="0">
+     inkscape:pagecheckerboard="0"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#585858">
     <inkscape:grid
        type="xygrid"
        id="grid2555"
@@ -276,7 +278,7 @@
          transform="translate(-140,121.063)" />
     </g>
     <g
-       transform="matrix(-1,0,0,1,604.875,3)"
+       transform="matrix(-1,0,0,1,599.875,3)"
        id="decoration-right">
       <path
          sodipodi:nodetypes="ccccc"
@@ -297,9 +299,9 @@
     </g>
     <g
        id="decoration-bottom"
-       transform="translate(-215,9)">
+       transform="translate(-220,9)">
       <path
-         style="opacity:0.5;fill:url(#linearGradient5688);fill-opacity:1;stroke:none;stroke-width:1.0058651"
+         style="opacity:0.5;fill:url(#linearGradient5688);fill-opacity:1;stroke:none;stroke-width:1.00587"
          d="m 325,289 v 86 h 145 v -86 z"
          id="path6217-8" />
       <path
@@ -314,11 +316,11 @@
     </g>
     <path
        style="opacity:1;fill:#363636;fill-opacity:1;stroke:none"
-       d="m 110,200 v 86 h 145 v -86 z"
+       d="m 105,200 v 86 h 145 v -86 z"
        id="decoration-center" />
     <g
        id="decoration-top"
-       transform="translate(-215,-5.99995)">
+       transform="translate(-220,-5.99995)">
       <path
          id="path6055-5"
          style="opacity:0.5;fill:url(#linearGradient6612);fill-opacity:1;stroke:none;stroke-width:1.01418"
@@ -342,7 +344,7 @@
     </g>
     <g
        id="decoration-left"
-       transform="translate(-239.875,3)">
+       transform="translate(-244.875,3)">
       <path
          style="opacity:0.5;fill:url(#linearGradient1126);fill-opacity:1;stroke:none;stroke-width:1.00664"
          d="m 244.875,197 v 86 h 76 v -86 z"
@@ -423,12 +425,12 @@
          id="path6339-9-9" />
     </g>
     <g
-       transform="translate(-385,-4.000015)"
+       transform="translate(-390,-4.000015)"
        id="decoration-bottomleft">
       <path
          id="rect7023-1"
          style="opacity:0.75;fill:#242424;fill-opacity:1;stroke:none"
-         d="M 81 196 C 81 202.648 86.352 208 93 208 L 110 208 L 110 196 L 81 196 z "
+         d="m 81,196 c 0,6.648 5.352,12 12,12 h 17 v -12 z"
          transform="translate(385,94.000015)" />
       <path
          id="rect5099-9-5"
@@ -461,41 +463,41 @@
        id="shadow-hint-top-margin"
        width="4"
        height="35.999897"
-       x="174"
+       x="169"
        y="134.00005" />
     <rect
-       style="opacity:1;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:1.18321598"
+       style="opacity:1;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:1.18322"
        id="shadow-hint-bottom-margin"
        width="4"
        height="85.999969"
-       x="175"
+       x="170"
        y="298.00003" />
     <rect
        style="opacity:1;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:0.707107"
        id="shadow-hint-right-margin"
        width="76"
        height="4"
-       x="284"
+       x="279"
        y="230" />
     <rect
        style="opacity:1;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:0.707107"
        id="shadow-hint-left-margin"
        width="76"
        height="4"
-       x="5"
+       x="0"
        y="224" />
     <rect
        id="hint-top-margin"
        width="4"
        height="66"
-       x="186"
+       x="181"
        y="134"
        style="fill:#00ff29;fill-opacity:1;stroke:none;stroke-width:1.08465" />
     <rect
        id="hint-bottom-margin"
        width="4"
        height="97.999992"
-       x="187"
+       x="182"
        y="286"
        style="fill:#00ff29;fill-opacity:1;stroke:none;stroke-width:1.11946" />
     <rect
@@ -503,7 +505,7 @@
        width="4"
        height="105"
        x="219"
-       y="-360"
+       y="-355"
        transform="rotate(90)"
        style="fill:#00ff29;fill-opacity:1;stroke:none;stroke-width:1.08465" />
     <rect
@@ -511,11 +513,11 @@
        width="4"
        height="105"
        x="216"
-       y="-110"
+       y="-105"
        transform="rotate(90)"
        style="fill:#00ff29;fill-opacity:1;stroke:none;stroke-width:1.0853" />
     <g
-       transform="matrix(-1,0,0,1,535,-31.0625)"
+       transform="matrix(-1,0,0,1,530,-31.0625)"
        id="decoration-topleft">
       <path
          id="path1019"
@@ -557,7 +559,7 @@
        y="0"
        xlink:href="#decoration-topleft"
        id="decoration-topright"
-       transform="matrix(-1,0,0,1,365,0)"
+       transform="matrix(-1,0,0,1,355,0)"
        width="100%"
        height="100%" />
     <use
@@ -573,7 +575,7 @@
        y="0"
        xlink:href="#decoration-bottomleft"
        id="decoration-bottomright"
-       transform="matrix(-1,0,0,1,365,0)"
+       transform="matrix(-1,0,0,1,355,0)"
        width="100%"
        height="100%" />
     <use
