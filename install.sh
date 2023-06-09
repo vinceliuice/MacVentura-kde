@@ -81,7 +81,7 @@ while [[ "$#" -gt 0 ]]; do
       ;;
     --round)
       round='true'
-      prompt -i "Install rounded Aurorae version."
+      echo -e "Install rounded Aurorae version."
       shift
       ;;
     -c|--color)
@@ -100,8 +100,8 @@ while [[ "$#" -gt 0 ]]; do
             break
             ;;
           *)
-            prompt -e "ERROR: Unrecognized color variant '$1'."
-            prompt -i "Try '$0 --help' for more information."
+            echo -e "ERROR: Unrecognized color variant '$1'."
+            echo -e "Try '$0 --help' for more information."
             exit 1
             ;;
         esac
@@ -112,17 +112,17 @@ while [[ "$#" -gt 0 ]]; do
       exit 0
       ;;
     *)
-      prompt -e "ERROR: Unrecognized installation option '$1'."
-      prompt -i "Try '$0 --help' for more information."
+      echo -e "ERROR: Unrecognized installation option '$1'."
+      echo -e "Try '$0 --help' for more information."
       exit 1
       ;;
   esac
 done
 
-echo "Installing '${THEME_NAME} kde themes'..."
+echo -e "Installing '${THEME_NAME} kde themes'..."
 
 for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
   install "${name:-${THEME_NAME}}" "${color}"
 done
 
-echo "Install finished..."
+echo -e "Install finished..."
