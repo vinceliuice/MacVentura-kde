@@ -8,6 +8,7 @@ ColorScheme=MacVenturaDark
 Theme=WhiteSur-dark
 
 [kdeglobals][KDE]
+LookAndFeelPackage=com.github.vinceliuice.MacVentura-Dark
 widgetStyle=kvantum-dark
 
 [kwinrc][DesktopSwitcher]
