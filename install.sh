@@ -8,6 +8,7 @@ PLASMOIDS_DIR="$HOME/.local/share/plasma/plasmoids"
 LOOKFEEL_DIR="$HOME/.local/share/plasma/look-and-feel"
 KVANTUM_DIR="$HOME/.config/Kvantum"
 WALLPAPER_DIR="$HOME/.local/share/wallpapers"
+LAYOUT_DIR="$HOME/.local/share/plasma/layout-templates"
 
 SRC_DIR=$(cd $(dirname $0) && pwd)
 
@@ -35,6 +36,7 @@ EOF
 [[ ! -d ${LOOKFEEL_DIR} ]] && mkdir -p ${LOOKFEEL_DIR}
 [[ ! -d ${KVANTUM_DIR} ]] && mkdir -p ${KVANTUM_DIR}
 [[ ! -d ${WALLPAPER_DIR} ]] && mkdir -p ${WALLPAPER_DIR}
+[[ ! -d ${LAYOUT_DIR} ]] && mkdir -p ${LAYOUT_DIR}
 
 cp -rf "${SRC_DIR}"/configs/Xresources "$HOME"/.Xresources
 
@@ -71,6 +73,7 @@ install() {
   mkdir -p                                                                           ${PLASMA_DIR}/${name}${color}/wallpapers
   cp -r ${SRC_DIR}/wallpapers/${name}${color}                                        ${PLASMA_DIR}/${name}${color}/wallpapers
   [[ -d ${LATTE_DIR} ]] && cp -r ${SRC_DIR}/latte-dock/${name}*.layout.latte         ${LATTE_DIR}
+  cp -r ${SRC_DIR}/plasma/layout-templates/org.github.desktop.MacOSPanel         ${LAYOUT_DIR}
 }
 
 while [[ "$#" -gt 0 ]]; do
