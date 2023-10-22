@@ -1,19 +1,30 @@
 #! /usr/bin/env bash
 
-# Destination directory
-AURORAE_DIR="$HOME/.local/share/aurorae/themes"
-SCHEMES_DIR="$HOME/.local/share/color-schemes"
-PLASMA_DIR="$HOME/.local/share/plasma/desktoptheme"
-PLASMOIDS_DIR="$HOME/.local/share/plasma/plasmoids"
-LOOKFEEL_DIR="$HOME/.local/share/plasma/look-and-feel"
-KVANTUM_DIR="$HOME/.config/Kvantum"
-WALLPAPER_DIR="$HOME/.local/share/wallpapers"
-LAYOUT_DIR="$HOME/.local/share/plasma/layout-templates"
-
 SRC_DIR=$(cd $(dirname $0) && pwd)
 
+ROOT_UID=0
+
+# Destination directory
+if [[ "$UID" -eq "$ROOT_UID" ]]; then
+  AURORAE_DIR="/usr/share/aurorae/themes"
+  SCHEMES_DIR="/usr/share/color-schemes"
+  PLASMA_DIR="/usr/share/plasma/desktoptheme"
+  PLASMOIDS_DIR="/usr/share/plasma/plasmoids"
+  LOOKFEEL_DIR="/usr/share/plasma/look-and-feel"
+  KVANTUM_DIR="/usr/share/Kvantum"
+  WALLPAPER_DIR="/usr/share/wallpapers"
+else
+  AURORAE_DIR="$HOME/.local/share/aurorae/themes"
+  SCHEMES_DIR="$HOME/.local/share/color-schemes"
+  PLASMA_DIR="$HOME/.local/share/plasma/desktoptheme"
+  PLASMOIDS_DIR="$HOME/.local/share/plasma/plasmoids"
+  LOOKFEEL_DIR="$HOME/.local/share/plasma/look-and-feel"
+  KVANTUM_DIR="$HOME/.config/Kvantum"
+  WALLPAPER_DIR="$HOME/.local/share/wallpapers"
+  LATTE_DIR="$HOME/.config/latte"
+fi
+
 THEME_NAME=MacVentura
-LATTE_DIR="$HOME/.config/latte"
 
 COLOR_VARIANTS=('-Light' '-Dark')
 
@@ -29,16 +40,15 @@ OPTIONS:
 EOF
 }
 
-[[ ! -d ${AURORAE_DIR} ]] && mkdir -p ${AURORAE_DIR}
-[[ ! -d ${SCHEMES_DIR} ]] && mkdir -p ${SCHEMES_DIR}
-[[ ! -d ${PLASMA_DIR} ]] && mkdir -p ${PLASMA_DIR}
-[[ ! -d ${PLASMOIDS_DIR} ]] && mkdir -p ${PLASMOIDS_DIR}
-[[ ! -d ${LOOKFEEL_DIR} ]] && mkdir -p ${LOOKFEEL_DIR}
-[[ ! -d ${KVANTUM_DIR} ]] && mkdir -p ${KVANTUM_DIR}
-[[ ! -d ${WALLPAPER_DIR} ]] && mkdir -p ${WALLPAPER_DIR}
-[[ ! -d ${LAYOUT_DIR} ]] && mkdir -p ${LAYOUT_DIR}
+[[ ! -d "${AURORAE_DIR}" ]] && mkdir -p ${AURORAE_DIR}
+[[ ! -d "${SCHEMES_DIR}" ]] && mkdir -p ${SCHEMES_DIR}
+[[ ! -d "${PLASMA_DIR}" ]] && mkdir -p ${PLASMA_DIR}
+[[ ! -d "${PLASMOIDS_DIR}" ]] && mkdir -p ${PLASMOIDS_DIR}
+[[ ! -d "${LOOKFEEL_DIR}" ]] && mkdir -p ${LOOKFEEL_DIR}
+[[ ! -d "${KVANTUM_DIR}" ]] && mkdir -p ${KVANTUM_DIR}
+[[ ! -d "${WALLPAPER_DIR}" ]] && mkdir -p ${WALLPAPER_DIR}
 
-cp -rf "${SRC_DIR}"/configs/Xresources "$HOME"/.Xresources
+# cp -rf "${SRC_DIR}"/configs/Xresources "$HOME"/.Xresources
 
 install() {
   local name=${1}
@@ -47,33 +57,42 @@ install() {
   [[ ${color} == '-Dark' ]] && local ELSE_COLOR='Dark'
   [[ ${color} == '-Light' ]] && local ELSE_COLOR='Light'
 
-  [[ -d ${AURORAE_DIR}/${name}${color} ]] && rm -rf ${AURORAE_DIR}/${name}${color}*
-  [[ -d ${PLASMA_DIR}/${name}${color} ]] && rm -rf ${PLASMA_DIR}/${name}${color}
-  [[ -f ${SCHEMES_DIR}/${name}${ELSE_COLOR}.colors ]] && rm -rf ${SCHEMES_DIR}/${name}${ELSE_COLOR}.colors
-  [[ -d ${LOOKFEEL_DIR}/com.github.vinceliuice.${name}${color} ]] && rm -rf ${LOOKFEEL_DIR}/com.github.vinceliuice.${name}${color}
-  [[ -d ${KVANTUM_DIR}/${name} ]] && rm -rf ${KVANTUM_DIR}/${name}
-  [[ -d ${WALLPAPER_DIR}/${name} ]] && rm -rf ${WALLPAPER_DIR}/${name}
-  [[ -d ${WALLPAPER_DIR}/${name}${color} ]] && rm -rf ${WALLPAPER_DIR}/${name}${color}
-  [[ -f ${LATTE_DIR}/${name}.layout.latte ]] && rm -rf ${LATTE_DIR}/${name}*.layout.latte
+  [[ -d "${AURORAE_DIR}/${name}${color}" ]] && rm -rf ${AURORAE_DIR}/${name}${color}{'','-1.25x','-1.5x'}
+  [[ -d "${PLASMA_DIR}/${name}${color}" ]] && rm -rf ${PLASMA_DIR}/${name}${color}
+  [[ -f "${SCHEMES_DIR}/${name}${ELSE_COLOR}".colors ]] && rm -rf ${SCHEMES_DIR}/${name}${ELSE_COLOR}.colors
+  [[ -d "${LOOKFEEL_DIR}/com.github.vinceliuice.${name}${color}" ]] && rm -rf ${LOOKFEEL_DIR}/com.github.vinceliuice.${name}${color}
+  [[ -d "${KVANTUM_DIR}/${name}" ]] && rm -rf ${KVANTUM_DIR}/${name}
+  [[ -d "${WALLPAPER_DIR}/${name}" ]] && rm -rf ${WALLPAPER_DIR}/${name}
+  [[ -d "${WALLPAPER_DIR}/${name}${color}" ]] && rm -rf ${WALLPAPER_DIR}/${name}${color}
+  [[ -d "${PLASMOIDS_DIR}/org.kde.plasma.betterinlineclock" ]] && rm -rf "${PLASMOIDS_DIR}/org.kde.plasma.betterinlineclock"
 
   if [[ "$round" == 'true' ]]; then
-    cp -r ${SRC_DIR}/aurorae/Round/${name}${color}*                                  ${AURORAE_DIR}
+    cp -r ${SRC_DIR}/aurorae/Round/${name}${color}{'','-1.25x','-1.5x'}              ${AURORAE_DIR}
   else
-    cp -r ${SRC_DIR}/aurorae/Sharp/${name}${color}*                                  ${AURORAE_DIR}
+    cp -r ${SRC_DIR}/aurorae/Sharp/${name}${color}{'','-1.25x','-1.5x'}              ${AURORAE_DIR}
   fi
 
   cp -r ${SRC_DIR}/Kvantum/${name}                                                   ${KVANTUM_DIR}
   cp -r ${SRC_DIR}/color-schemes/${name}${ELSE_COLOR}.colors                         ${SCHEMES_DIR}
   cp -r ${SRC_DIR}/plasma/desktoptheme/${name}${color}                               ${PLASMA_DIR}
   cp -r ${SRC_DIR}/plasma/desktoptheme/icons                                         ${PLASMA_DIR}/${name}${color}
-#  cp -r ${SRC_DIR}/color-schemes/${name}${ELSE_COLOR}.colors                         ${PLASMA_DIR}/${name}${color}/colors
-  cp -r ${SRC_DIR}/plasma/plasmoids/*                                                ${PLASMOIDS_DIR}
   cp -r ${SRC_DIR}/plasma/look-and-feel/com.github.vinceliuice.${name}${color}       ${LOOKFEEL_DIR}
-  cp -r ${SRC_DIR}/wallpapers/${name}*                                               ${WALLPAPER_DIR}
+  cp -r ${SRC_DIR}/wallpapers/${name}                                                ${WALLPAPER_DIR}
+  cp -r ${SRC_DIR}/wallpapers/${name}${color}                                        ${WALLPAPER_DIR}
   mkdir -p                                                                           ${PLASMA_DIR}/${name}${color}/wallpapers
   cp -r ${SRC_DIR}/wallpapers/${name}${color}                                        ${PLASMA_DIR}/${name}${color}/wallpapers
-  [[ -d ${LATTE_DIR} ]] && cp -r ${SRC_DIR}/latte-dock/${name}*.layout.latte         ${LATTE_DIR}
-  cp -r ${SRC_DIR}/plasma/layout-templates/org.github.desktop.MacOSPanel         ${LAYOUT_DIR}
+
+  if [[ ! -d "${PLASMOIDS_DIR}/org.kde.plasma.betterinlineclock" ]]; then
+    cp -r ${SRC_DIR}/plasma/plasmoids/org.kde.plasma.betterinlineclock               ${PLASMOIDS_DIR}
+  fi
+
+  if [[ "$UID" != "$ROOT_UID" && -d "${LATTE_DIR}" ]]; then
+    if [[ -f ${LATTE_DIR}/${name}.layout.latte ]]; then
+      rm -rf ${LATTE_DIR}/${name}{'','_x2'}.layout.latte
+    fi
+
+    cp -r ${SRC_DIR}/latte-dock/${name}{'','_x2'}.layout.latte         ${LATTE_DIR}
+  fi
 }
 
 while [[ "$#" -gt 0 ]]; do
