@@ -1,22 +1,27 @@
-import "components"
+import org.kde.breeze.components
 
-import QtQuick 2.0
-import QtQuick.Layouts 1.2
-import QtQuick.Controls.Styles 1.4
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15 as QQC2
 
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.plasma5support 2.0 as PlasmaCore
 
 SessionManagementScreen {
-
+    id: root
+    property Item mainPasswordBox: passwordBox
     property bool showUsernamePrompt: !showUserList
     property int usernameFontSize
+    property int fontSize: parseInt(config.fontSize)
     property string usernameFontColor
     property string lastUserName
+    property bool loginScreenUiVisible: false
     property bool passwordFieldOutlined: config.PasswordFieldOutlined == "true"
     property bool hidePasswordRevealIcon: config.HidePasswordRevealIcon == "false"
     property int visibleBoundary: mapFromItem(loginButton, 0, 0).y
-    onHeightChanged: visibleBoundary = mapFromItem(loginButton, 0, 0).y + loginButton.height + units.smallSpacing
+    onHeightChanged: visibleBoundary = mapFromItem(loginButton, 0, 0).y + loginButton.height + Kirigami.Units.smallSpacing
 
     signal loginRequest(string username, string password)
 
@@ -26,60 +31,91 @@ SessionManagementScreen {
         }
     }
 
+    onUserSelected: {
+        // Don't startLogin() here, because the signal is connected to the
+        // Escape key as well, for which it wouldn't make sense to trigger
+        // login.
+        focusFirstVisibleFormControl();
+    }
+
+    QQC2.StackView.onActivating: {
+        // Controls are not visible yet.
+        Qt.callLater(focusFirstVisibleFormControl);
+    }
+
+    function focusFirstVisibleFormControl() {
+        const nextControl = (userNameInput.visible
+            ? userNameInput
+            : (passwordBox.visible
+                ? passwordBox
+                : loginButton));
+        // Using TabFocusReason, so that the loginButton gets the visual highlight.
+        nextControl.forceActiveFocus(Qt.TabFocusReason);
+    }
+
     /*
     * Login has been requested with the following username and password
     * If username field is visible, it will be taken from that, otherwise from the "name" property of the currentIndex
     */
     function startLogin() {
-        var username = showUsernamePrompt ? userNameInput.text : userList.selectedUser
-        var password = passwordBox.text
+        const username = showUsernamePrompt ? userNameInput.text : userList.selectedUser
+        const password = passwordBox.text
 
+        footer.enabled = false
+        mainStack.enabled = false
+        userListComponent.userList.opacity = 0.5
+
+        // This is partly because it looks nicer, but more importantly it
+        // works round a Qt bug that can trigger if the app is closed with a
+        // TextField focused.
+        //
+        // See https://bugreports.qt.io/browse/QTBUG-55460
         loginButton.forceActiveFocus();
         loginRequest(username, password);
     }
 
-    PlasmaComponents.TextField {
+    PlasmaComponents3.TextField {
         id: userNameInput
         Layout.fillWidth: true
+        Layout.preferredHeight: 30
         font.pointSize: fontSize + 1
-        opacity: 0.5
+        opacity: passwordFieldOutlined ? 1.0 : 0.75
         text: lastUserName
         visible: showUsernamePrompt
         focus: showUsernamePrompt && !lastUserName //if there's a username prompt it gets focus first, otherwise password does
         placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Username")
+        placeholderTextColor: passwordFieldOutlined ? "white" : "white"
 
-        style: TextFieldStyle {
-            textColor: "black"
-            placeholderTextColor: "black"
-            background: Rectangle {
-                radius: 100
-                color: "white"
-            }
+        background: Rectangle {
+            radius: 100
+            color: "white"
+            opacity: 0.45
+            // border.color: "#ffffff"
+            // border.width: 2
         }
     }
 
-    PlasmaComponents.TextField {
+    PlasmaComponents3.TextField {
         id: passwordBox
         Layout.fillWidth: true
         font.pointSize: fontSize + 1
-        opacity: passwordFieldOutlined ? 1.0 : 0.5
+        Layout.preferredHeight: 30
+        opacity: passwordFieldOutlined ? 1.0 : 0.75
         font.family: config.Font || "Noto Sans"
         placeholderText: config.PasswordFieldPlaceholderText == "Password" ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password") : config.PasswordFieldPlaceholderText
         focus: !showUsernamePrompt || lastUserName
         echoMode: TextInput.Password
-        revealPasswordButtonShown: hidePasswordRevealIcon
         onAccepted: startLogin()
+        placeholderTextColor: passwordFieldOutlined ? "white" : "white"
+        passwordCharacter: config.PasswordFieldCharacter == "" ? "●" : config.PasswordFieldCharacter
+        color: "white"
 
-        style: TextFieldStyle {
-            textColor: passwordFieldOutlined ? "white" : "black"
-            placeholderTextColor: passwordFieldOutlined ? "white" : "white"
-            passwordCharacter: config.PasswordFieldCharacter == "" ? "●" : config.PasswordFieldCharacter
-            background: Rectangle {
-                radius: 100
-                border.color: "white"
-                border.width: 1
-                color: "white"
-            }
+        background: Rectangle {
+            radius: 100
+            color: "white"
+            opacity: 0.45
+            // border.color: "#ffffff"
+            // border.width: 2
         }
 
         Keys.onEscapePressed: {
