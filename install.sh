@@ -57,7 +57,7 @@ install() {
   [[ ${color} == '-Dark' ]] && local ELSE_COLOR='Dark'
   [[ ${color} == '-Light' ]] && local ELSE_COLOR='Light'
 
-  [[ -d "${AURORAE_DIR}/${name}${color}" ]] && rm -rf ${AURORAE_DIR}/${name}${color}{'','-1.25x','-1.5x'}
+  [[ -d "${AURORAE_DIR}/${name}${color}" ]] && rm -rf ${AURORAE_DIR}/${name}${color}{'','-1.25x','-1.5x','-2.0x'}
   [[ -d "${PLASMA_DIR}/${name}${color}" ]] && rm -rf ${PLASMA_DIR}/${name}${color}
   [[ -f "${SCHEMES_DIR}/${name}${ELSE_COLOR}".colors ]] && rm -rf ${SCHEMES_DIR}/${name}${ELSE_COLOR}.colors
   [[ -d "${LOOKFEEL_DIR}/com.github.vinceliuice.${name}${color}" ]] && rm -rf ${LOOKFEEL_DIR}/com.github.vinceliuice.${name}${color}
@@ -67,9 +67,9 @@ install() {
   [[ -d "${PLASMOIDS_DIR}/org.kde.plasma.betterinlineclock" ]] && rm -rf "${PLASMOIDS_DIR}/org.kde.plasma.betterinlineclock"
 
   if [[ "$round" == 'true' ]]; then
-    cp -r ${SRC_DIR}/aurorae/Round/${name}${color}{'','-1.25x','-1.5x'}              ${AURORAE_DIR}
+    cp -r ${SRC_DIR}/aurorae/Round/${name}${color}{'','-1.25x','-1.5x','-2.0x'}      ${AURORAE_DIR}
   else
-    cp -r ${SRC_DIR}/aurorae/Sharp/${name}${color}{'','-1.25x','-1.5x'}              ${AURORAE_DIR}
+    cp -r ${SRC_DIR}/aurorae/Sharp/${name}${color}{'','-1.25x','-1.5x','-2.0x'}      ${AURORAE_DIR}
   fi
 
   cp -r ${SRC_DIR}/Kvantum/${name}                                                   ${KVANTUM_DIR}
