@@ -17,5 +17,4 @@ X-KDE-PluginInfo-Name=com.github.vinceliuice.MacVentura-Light
 X-KDE-PluginInfo-Website=https://github.com/vinceliuice/MacVentura-kde
 X-KDE-fallbackPackage=org.kde.breeze.desktop
 X-Plasma-MainScript=defaults
-
 X-KPackage-Dependencies=kns://colorschemes.knsrc/api.kde-look.org/2044268,kns://plasma-themes.knsrc/api.kde-look.org/2044280,kns://aurorae.knsrc/api.kde-look.org/2044275,kns://wallpaper.knsrc/api.kde-look.org/2044274,kns://sddmtheme.knsrc/api.kde-look.org/2044279,kns://icons.knsrc/api.kde-look.org/1405756,kns://xcursor.knsrc/api.kde-look.org/1411743
