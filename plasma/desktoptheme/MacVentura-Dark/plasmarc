@@ -1,0 +1,14 @@
+[Wallpaper]
+defaultWallpaperTheme=MacVentura-Dark
+defaultFileSuffix=.jpg
+defaultWidth=3840
+defaultHeight=3840
+
+[ContrastEffect]
+enabled=false
+contrast=0.2
+intensity=1.4
+saturation=10
+
+[AdaptiveTransparency]
+enabled=true
