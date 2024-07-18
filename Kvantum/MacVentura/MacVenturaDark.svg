@@ -4,7 +4,7 @@
    version="1.0"
    height="1338"
    id="svg2"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
    sodipodi:docname="MacVenturaDark.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -36,14 +36,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1014"
+     inkscape:window-height="950"
      id="namedview967"
      showgrid="false"
-     inkscape:zoom="4"
-     inkscape:cx="604.75"
-     inkscape:cy="751.75"
+     inkscape:zoom="11.313708"
+     inkscape:cx="719.39276"
+     inkscape:cy="268.61219"
      inkscape:window-x="0"
-     inkscape:window-y="32"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2"
      inkscape:pagecheckerboard="0"
@@ -54,7 +54,11 @@
        id="grid4683"
        type="xygrid"
        originx="0"
-       originy="0" />
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="mm"
+       visible="false" />
   </sodipodi:namedview>
   <defs
      id="defs5">
@@ -1008,8 +1012,8 @@
        id="filter1536"
        inkscape:label="Drop Shadow"
        style="color-interpolation-filters:sRGB"
-       x="-6.7792373e-15"
-       y="-1.6166542e-14"
+       x="0"
+       y="0"
        width="1"
        height="1.0798329">
       <feFlood
@@ -1666,109 +1670,23 @@
        id="radialGradient3762"
        xlink:href="#linearGradient4465"
        inkscape:collect="always" />
-    <filter
-       id="filter0_dd"
-       x="0"
-       y="0.5"
-       width="20"
-       height="20"
-       filterUnits="userSpaceOnUse"
-       color-interpolation-filters="sRGB">
-      <feFlood
-         flood-opacity="0"
-         result="BackgroundImageFix"
-         id="feFlood2969" />
-      <feColorMatrix
-         in="SourceAlpha"
-         type="matrix"
-         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-         result="hardAlpha"
-         id="feColorMatrix2971" />
-      <feOffset
-         dy="0.5"
-         id="feOffset2973" />
-      <feGaussianBlur
-         stdDeviation="0.75"
-         id="feGaussianBlur2975" />
-      <feColorMatrix
-         type="matrix"
-         values="0 0 0 0 0.211765 0 0 0 0 0.478431 0 0 0 0 0.964706 0 0 0 0.25 0"
-         id="feColorMatrix2977" />
-      <feBlend
-         mode="normal"
-         in2="BackgroundImageFix"
-         result="effect1_dropShadow"
-         id="feBlend2979" />
-      <feColorMatrix
-         in="SourceAlpha"
-         type="matrix"
-         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-         result="hardAlpha"
-         id="feColorMatrix2981" />
-      <feOffset
-         dy="0.5"
-         id="feOffset2983" />
-      <feGaussianBlur
-         stdDeviation="1"
-         id="feGaussianBlur2985" />
-      <feColorMatrix
-         type="matrix"
-         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-         id="feColorMatrix2987" />
-      <feBlend
-         mode="normal"
-         in2="effect1_dropShadow"
-         result="effect2_dropShadow"
-         id="feBlend2989" />
-      <feBlend
-         mode="normal"
-         in="SourceGraphic"
-         in2="effect2_dropShadow"
-         result="shape"
-         id="feBlend2991" />
-    </filter>
     <linearGradient
-       id="paint0_linear"
+       id="paint0_linear-3"
        x1="10"
        y1="2"
        x2="10"
        y2="18"
-       gradientUnits="userSpaceOnUse">
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(717.58735,254.16284)">
       <stop
          stop-color="#4B91F7"
-         id="stop2994" />
+         id="stop2994-6" />
       <stop
          offset="1"
          stop-color="#367AF6"
-         id="stop2996" />
+         id="stop2996-7" />
     </linearGradient>
   </defs>
-  <g
-     id="comboarrow-normal"
-     transform="translate(-20.406871,-2.6677442)">
-    <g
-       filter="url(#filter0_dd)"
-       id="g2963"
-       transform="translate(717.58735,254.16284)">
-      <rect
-         x="2"
-         y="2"
-         width="16"
-         height="16"
-         rx="4"
-         fill="url(#paint0_linear)"
-         id="rect2961"
-         style="fill:url(#paint0_linear)" />
-    </g>
-    <path
-       d="m 727.58735,259.16284 c -0.25132,0.003 -0.44351,0.0861 -0.65048,0.27539 l -2.63516,2.51979 c -0.14783,0.13769 -0.21436,0.2926 -0.21436,0.48881 0,0.39243 0.34372,0.71601 0.75766,0.71601 0.21066,0 0.40654,-0.0792 0.56547,-0.23408 l 2.16948,-2.11015 2.18059,2.11015 c 0.1589,0.15146 0.3548,0.23408 0.5691,0.23408 0.414,0 0.7577,-0.32358 0.7577,-0.71601 0,-0.19277 -0.0702,-0.34767 -0.2144,-0.48881 l -2.6388,-2.51979 c -0.207,-0.19277 -0.4029,-0.27539 -0.6468,-0.27539 z"
-       fill="#fefeff"
-       id="path2965" />
-    <path
-       d="m 727.58735,269.16284 c -0.25132,-0.003 -0.44351,-0.0861 -0.65048,-0.2754 l -2.63516,-2.5198 c -0.14783,-0.1377 -0.21436,-0.2926 -0.21436,-0.4888 0,-0.3924 0.34372,-0.716 0.75766,-0.716 0.21066,0 0.40654,0.0792 0.56547,0.2341 l 2.16948,2.1101 2.18059,-2.1101 c 0.1589,-0.1515 0.3548,-0.2341 0.5691,-0.2341 0.414,0 0.7577,0.3236 0.7577,0.716 0,0.1928 -0.0702,0.3477 -0.2144,0.4888 l -2.6388,2.5198 c -0.207,0.1928 -0.4029,0.2754 -0.6468,0.2754 z"
-       fill="#fefeff"
-       id="path2967" />
-  </g>
   <rect
      id="tab-tear"
      style="fill:#3176bf;fill-rule:evenodd;stroke:none"
@@ -11485,5 +11403,46 @@
            d="m 0.95977465,291.33314 c 0.16602605,-0.1542 0.49750985,-0.1542 0.82927705,-0.1542 h 1.9804064 c 0.3310126,0 0.6623071,0 0.8276724,0.1542 0.1653654,0.15421 0.1653654,0.46316 0.1653654,0.77184 v 1.45532 c 0,0 -1.9843753,2.302 -1.9843753,2.302 0,0 -1.9843706,-2.302 -1.9843706,-2.302 0,0 -4.2e-6,-1.45532 -4.2e-6,-1.45532 1.4e-6,-0.30868 2.8e-6,-0.61763 0.16602885,-0.77184 z" />
       </g>
     </g>
+  </g>
+  <g
+     id="comboarrow-normal"
+     transform="translate(-20.587341,-3.1628418)">
+    <rect
+       x="718.58734"
+       y="255.16284"
+       width="18"
+       height="18"
+       rx="5"
+       id="rect2"
+       ry="5.0000005"
+       style="opacity:0.1;fill:#000000" />
+    <rect
+       x="719.58734"
+       y="257.16284"
+       width="16"
+       height="16"
+       rx="4"
+       id="rect1"
+       style="opacity:0.1;fill:#000000" />
+    <rect
+       x="719.58734"
+       y="256.16284"
+       width="16"
+       height="16"
+       rx="4"
+       id="rect2961"
+       style="fill:url(#paint0_linear-3)" />
+    <path
+       d="m 727.58735,259.16284 c -0.25132,0.003 -0.44351,0.0861 -0.65048,0.27539 l -2.63516,2.51979 c -0.14783,0.13769 -0.21436,0.2926 -0.21436,0.48881 0,0.39243 0.34372,0.71601 0.75766,0.71601 0.21066,0 0.40654,-0.0792 0.56547,-0.23408 l 2.16948,-2.11015 2.18059,2.11015 c 0.1589,0.15146 0.3548,0.23408 0.5691,0.23408 0.414,0 0.7577,-0.32358 0.7577,-0.71601 0,-0.19277 -0.0702,-0.34767 -0.2144,-0.48881 l -2.6388,-2.51979 c -0.207,-0.19277 -0.4029,-0.27539 -0.6468,-0.27539 z"
+       fill="#fefeff"
+       id="path2965" />
+    <path
+       d="m 727.58735,269.16284 c -0.25132,-0.003 -0.44351,-0.0861 -0.65048,-0.2754 l -2.63516,-2.5198 c -0.14783,-0.1377 -0.21436,-0.2926 -0.21436,-0.4888 0,-0.3924 0.34372,-0.716 0.75766,-0.716 0.21066,0 0.40654,0.0792 0.56547,0.2341 l 2.16948,2.1101 2.18059,-2.1101 c 0.1589,-0.1515 0.3548,-0.2341 0.5691,-0.2341 0.414,0 0.7577,0.3236 0.7577,0.716 0,0.1928 -0.0702,0.3477 -0.2144,0.4888 l -2.6388,2.5198 c -0.207,0.1928 -0.4029,0.2754 -0.6468,0.2754 z"
+       fill="#fefeff"
+       id="path2967" />
+    <path
+       id="rect3"
+       d="m 723.58734,256.16284 c -2.216,0 -4,1.784 -4,4 v 1 c 0,-2.216 1.784,-4 4,-4 h 8 c 2.216,0 4,1.784 4,4 v -1 c 0,-2.216 -1.784,-4 -4,-4 z"
+       style="opacity:0.15;fill:#ffffff" />
   </g>
 </svg>
