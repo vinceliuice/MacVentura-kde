@@ -10,7 +10,7 @@ joined_inactive_tabs=false
 group_toolbar_buttons=false
 spread_progressbar=true
 composite=true
-menu_shadow_depth=13
+menu_shadow_depth=4
 spread_menuitems=false
 tooltip_shadow_depth=5
 scroll_width=12
@@ -502,10 +502,10 @@ frame.expansion=0
 
 [Menu]
 inherits=PanelButtonCommand
-frame.top=18
-frame.bottom=18
-frame.left=18
-frame.right=18
+frame.top=6
+frame.bottom=6
+frame.left=6
+frame.right=6
 frame.element=menu
 interior.element=menu
 text.normal.color=#333333
