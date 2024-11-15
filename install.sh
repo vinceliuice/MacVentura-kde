@@ -10,6 +10,7 @@ if [[ "$UID" -eq "$ROOT_UID" ]]; then
   SCHEMES_DIR="/usr/share/color-schemes"
   PLASMA_DIR="/usr/share/plasma/desktoptheme"
   PLASMOIDS_DIR="/usr/share/plasma/plasmoids"
+  LAYOUT_DIR="/usr/share/plasma/layout-templates"
   LOOKFEEL_DIR="/usr/share/plasma/look-and-feel"
   KVANTUM_DIR="/usr/share/Kvantum"
   WALLPAPER_DIR="/usr/share/wallpapers"
@@ -18,6 +19,7 @@ else
   SCHEMES_DIR="$HOME/.local/share/color-schemes"
   PLASMA_DIR="$HOME/.local/share/plasma/desktoptheme"
   PLASMOIDS_DIR="$HOME/.local/share/plasma/plasmoids"
+  LAYOUT_DIR="$HOME/.local/share/plasma/layout-templates"
   LOOKFEEL_DIR="$HOME/.local/share/plasma/look-and-feel"
   KVANTUM_DIR="$HOME/.config/Kvantum"
   WALLPAPER_DIR="$HOME/.local/share/wallpapers"
@@ -59,12 +61,12 @@ install() {
 
   [[ -d "${AURORAE_DIR}/${name}${color}" ]] && rm -rf ${AURORAE_DIR}/${name}${color}{'','-1.25x','-1.5x','-2.0x'}
   [[ -d "${PLASMA_DIR}/${name}${color}" ]] && rm -rf ${PLASMA_DIR}/${name}${color}
+  [[ -d "${LAYOUT_DIR}/org.github.desktop.MacOSPanel" ]] && rm -rf ${LAYOUT_DIR}/org.github.desktop.MacOSPanel
   [[ -f "${SCHEMES_DIR}/${name}${ELSE_COLOR}".colors ]] && rm -rf ${SCHEMES_DIR}/${name}${ELSE_COLOR}.colors
   [[ -d "${LOOKFEEL_DIR}/com.github.vinceliuice.${name}${color}" ]] && rm -rf ${LOOKFEEL_DIR}/com.github.vinceliuice.${name}${color}
   [[ -d "${KVANTUM_DIR}/${name}" ]] && rm -rf ${KVANTUM_DIR}/${name}
   [[ -d "${WALLPAPER_DIR}/${name}" ]] && rm -rf ${WALLPAPER_DIR}/${name}
   [[ -d "${WALLPAPER_DIR}/${name}${color}" ]] && rm -rf ${WALLPAPER_DIR}/${name}${color}
-  [[ -d "${PLASMOIDS_DIR}/org.kde.plasma.betterinlineclock" ]] && rm -rf "${PLASMOIDS_DIR}/org.kde.plasma.betterinlineclock"
 
   if [[ "$round" == 'true' ]]; then
     cp -r ${SRC_DIR}/aurorae/Round/${name}${color}{'','-1.25x','-1.5x','-2.0x'}      ${AURORAE_DIR}
@@ -76,15 +78,12 @@ install() {
   cp -r ${SRC_DIR}/color-schemes/${name}${ELSE_COLOR}.colors                         ${SCHEMES_DIR}
   cp -r ${SRC_DIR}/plasma/desktoptheme/${name}${color}                               ${PLASMA_DIR}
   cp -r ${SRC_DIR}/plasma/desktoptheme/icons                                         ${PLASMA_DIR}/${name}${color}
+  cp -r ${SRC_DIR}/plasma/layout-templates/org.github.desktop.MacOSPanel             ${LAYOUT_DIR}
   cp -r ${SRC_DIR}/plasma/look-and-feel/com.github.vinceliuice.${name}${color}       ${LOOKFEEL_DIR}
   cp -r ${SRC_DIR}/wallpapers/${name}                                                ${WALLPAPER_DIR}
   cp -r ${SRC_DIR}/wallpapers/${name}${color}                                        ${WALLPAPER_DIR}
   mkdir -p                                                                           ${PLASMA_DIR}/${name}${color}/wallpapers
   cp -r ${SRC_DIR}/wallpapers/${name}${color}                                        ${PLASMA_DIR}/${name}${color}/wallpapers
-
-  if [[ ! -d "${PLASMOIDS_DIR}/org.kde.plasma.betterinlineclock" ]]; then
-    cp -r ${SRC_DIR}/plasma/plasmoids/org.kde.plasma.betterinlineclock               ${PLASMOIDS_DIR}
-  fi
 
   if [[ "$UID" != "$ROOT_UID" && -d "${LATTE_DIR}" ]]; then
     if [[ -f ${LATTE_DIR}/${name}.layout.latte ]]; then

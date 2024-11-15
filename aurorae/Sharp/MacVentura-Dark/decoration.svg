@@ -4,7 +4,7 @@
    height="310"
    id="svg3642"
    sodipodi:version="0.32"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
    sodipodi:docname="decoration.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
@@ -23,17 +23,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="4"
-     inkscape:cx="269.75"
-     inkscape:cy="174.875"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="159.80613"
+     inkscape:cy="223.44574"
      inkscape:current-layer="svg3642"
      showgrid="false"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
-     inkscape:window-width="3840"
-     inkscape:window-height="2034"
+     inkscape:window-width="1920"
+     inkscape:window-height="950"
      inkscape:window-x="0"
-     inkscape:window-y="58"
+     inkscape:window-y="0"
      width="48px"
      height="48px"
      showguides="true"
@@ -65,7 +65,12 @@
        color="#8f8fff"
        opacity="0.1254902"
        empcolor="#6decff"
-       empopacity="0.25098039" />
+       empopacity="0.25098039"
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px" />
   </sodipodi:namedview>
   <defs
      id="defs3644">
@@ -425,30 +430,30 @@
        sodipodi:nodetypes="ccccccc" />
   </g>
   <rect
-     style="fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:0.341565"
+     style="fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:0.333334"
      id="shadow-hint-top-margin"
      width="4"
-     height="20.999943"
+     height="20"
      x="174"
      y="59" />
   <rect
-     style="fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:0.980037"
+     style="fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:0.971696"
      id="shadow-hint-bottom-margin"
      width="4"
-     height="59"
+     height="58"
      x="175"
-     y="196" />
+     y="197" />
   <rect
-     style="fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:0.519362"
+     style="fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:0.512992"
      id="shadow-hint-right-margin"
-     width="41"
+     width="40.0005"
      height="4"
-     x="284"
+     x="284.99951"
      y="140" />
   <rect
-     style="fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:0.519362"
+     style="fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:0.512989"
      id="shadow-hint-left-margin"
-     width="41"
+     width="40"
      height="4"
      x="40"
      y="134" />
