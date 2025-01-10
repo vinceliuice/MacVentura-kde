@@ -11,6 +11,7 @@ import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.plasma5support 2.0 as P5Support
+import org.kde.plasma.private.keyboardindicator as KeyboardIndicator
 import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.breeze.components
@@ -209,30 +210,30 @@ Item {
                 actionItemsVisible: !inputPanel.keyboardActive
                 actionItems: [
                     ActionButton {
-                        iconSource: "/usr/share/sddm/themes/MacVentura/assets/suspend_primary.svgz"
+                        icon.name: "/usr/share/sddm/themes/MacVentura/assets/suspend_primary.svgz"
                         text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Sleep")
-                        fontSize: parseInt(config.fontSize) + 1
+                        font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
                     },
                     ActionButton {
-                        iconSource: "/usr/share/sddm/themes/MacVentura/assets/restart_primary.svgz"
+                        icon.name: "/usr/share/sddm/themes/MacVentura/assets/restart_primary.svgz"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
-                        fontSize: parseInt(config.fontSize) + 1
+                        font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.reboot()
                         enabled: sddm.canReboot
                     },
                     ActionButton {
-                        iconSource: "/usr/share/sddm/themes/MacVentura/assets/shutdown_primary.svgz"
+                        icon.name: "/usr/share/sddm/themes/MacVentura/assets/shutdown_primary.svgz"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
-                        fontSize: parseInt(config.fontSize) + 1
+                        font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
                     },
                     ActionButton {
-                        iconSource: "/usr/share/sddm/themes/MacVentura/assets/switch_primary.svgz"
+                        icon.name: "/usr/share/sddm/themes/MacVentura/assets/switch_primary.svgz"
                         text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "For switching to a username and password prompt", "Other…")
-                        fontSize: parseInt(config.fontSize) + 1
+                        font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: mainStack.push(userPromptComponent)
                         enabled: true
                         visible: !userListComponent.showUsernamePrompt
@@ -330,7 +331,7 @@ Item {
                 showUsernamePrompt: true
                 notificationMessage: root.notificationMessage
                 //loginScreenUiVisible: loginScreenRoot.uiVisible
-                fontSize: parseInt(config.fontSize) + 2
+                fontSize: Kirigami.Theme.defaultFont.pointSize + 2
 
                 // using a model rather than a QObject list to avoid QTBUG-75900
                 userListModel: ListModel {
@@ -353,30 +354,30 @@ Item {
                 actionItemsVisible: !inputPanel.keyboardActive
                 actionItems: [
                     ActionButton {
-                        iconSource: "/usr/share/sddm/themes/MacVentura/assets/suspend_primary.svgz"
+                        icon.name: "/usr/share/sddm/themes/MacVentura/assets/suspend_primary.svgz"
                         text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Sleep")
-                        fontSize: parseInt(config.fontSize) + 1
+                        font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
                     },
                     ActionButton {
-                        iconSource: "/usr/share/sddm/themes/MacVentura/assets/restart_primary.svgz"
+                        icon.name: "/usr/share/sddm/themes/MacVentura/assets/restart_primary.svgz"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
-                        fontSize: parseInt(config.fontSize) + 1
+                        font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.reboot()
                         enabled: sddm.canReboot
                     },
                     ActionButton {
-                        iconSource: "/usr/share/sddm/themes/MacVentura/assets/shutdown_primary.svgz"
+                        icon.name: "/usr/share/sddm/themes/MacVentura/assets/shutdown_primary.svgz"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
-                        fontSize: parseInt(config.fontSize) + 1
+                        font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
                     },
                     ActionButton {
-                        iconSource: "/usr/share/sddm/themes/MacVentura/assets/switch_primary.svgz"
+                        icon.name: "/usr/share/sddm/themes/MacVentura/assets/switch_primary.svgz"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "List Users")
-                        fontSize: parseInt(config.fontSize) + 1
+                        font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: mainStack.pop()
                     }
                 ]
